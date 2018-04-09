@@ -1,0 +1,8 @@
+
+php_value display_errors 1
+Options All -Indexes 
+Options +FollowSymLinks
+php_flag output_buffering On
+RewriteEngine On
+# RewriteRule ^([a-zA-Z0-9/-])+$ index.php?url=$1
+#RewriteRule ^([a-zA-Z0-9/])+$ index.php?url=$1
