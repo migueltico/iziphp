@@ -1,5 +1,31 @@
  # <p style="text-align: center;"> GUIA RAPIDA </p>
  ---
+# Instalacion
+
+
+##### Requerimientos minimos
+
+- PHP >= 7.0
+- PDO PHP Extension
+- PHP Server o Apache VirtualHost para entorno de desarrollo
+
+En la carpeta `./models/` encontraremos un archivo `conexion.php`, para poder hacer uso del mismo debes configurar en tu `php.ini` el `PDO` removiendo el `;` para su uso posterior, deberia verse de esta manera:
+```
+extension=pdo_mysql
+```
+
+
+Inicie desde un servidor `localhost` o un `VirtualHost` de apache en entorno de desarrollo para que funcione correctamente
+- No funcionara si tratas de ejecutarlo desde `"htdocs/micarpetaweb"` del xammp, pero si funcionara si el proyecto se ejecuta desde la raiz de `htdocs`
+- para ejecutar un server php ingresa a la carpeta del proyecto y ejecuta desde un `cmd` o `git bash` este comando:
+```
+php -S localhost:80
+```
+o simplemente configura tu `Virtualhost` con apache, busca un tutorial  XD
+[Virtual Host Guia](https://httpd.apache.org/docs/2.4/vhosts/examples.html)
+
+
+ ---
 # Rutas
 Las rutas las podemos encontrar en las carpeta del proyecto `./rutas/rutas.php`, en este archivo se escriben las rutas que necesitara el proyecto. Podemos encontrar alli tanto las  **`ruta::post`** y las **`ruta::get`**, estas funciones reciben dos parametros:
  - La ruta
@@ -199,22 +225,5 @@ class indexController extends view
 
 La carpeta por default donde se deben colocar los archivos como `*.ccs`, `*.js`, `*.png` o subcarpetas con dichos contenidos es la carpeta `public`, esta carpeta puede ser reemplazada por la que gusten, no hay restricción.
 
----
-# Como ejecutar
 
--Desde su gestor de base de datos, seleccione importar sql y seleccione `base.sql`, esto para las pruebas del proyecto IZIPHP, asi mismo para usar su configuracion default
-debes configurar en tu `php.ini` el `PDO` quitandole el `;` quedaria asi:
-```
-extension=pdo_mysql
-```
-
-
--IZIZPHP solo funciona desde un servidor `localhost` o un `VirtualHost` de apache en entorno de desarrollo
-	*-No funcionara si tratas de ejecutarlo desde `"htdocs/micarpetaweb"` del xammp, pero si funcionara si el proyecto se ejecuta desde la raiz de `htdocs`
-	*-para ejecutar un server php ingresa a la carpeta del proyecto y ejecuta desde un `cmd` o `git bash` este comando:
-```
-php -S localhost:80
-```
-o simplemente configura tu `Virtualhost` con apache, busca un tutorial  XD
-[Virtual Host Guia](https://httpd.apache.org/docs/2.4/vhosts/examples.html)
 
